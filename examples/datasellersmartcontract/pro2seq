@@ -1,6 +1,11 @@
 #!/bin/bash
 #
-# Programmer: Carlos Molina Jimenez, Newcastle Univ, 7 Sep 2012
+# Programmer: Carlos Molina Jimenez, 
+# Current Version: v1.2  20 Jun 2018, Computer Laboratory
+#                  University of Cambridge
+#
+# Version 1.0  7 Sep 2012, School of Computing Science
+#              University of Newcastle
 #
 # Programme: Given a Promela model as input, this
 #            shell generates the execution sequences
@@ -95,7 +100,8 @@ else
 fi
 
 echo " "
-# This parser was written by Ioannis Sfyrakis in Sep2012
+# The first version of this parser was written by 
+# Ioannis Sfyrakis in Sep 2012.
 echo "Calling python filter to generate xml tagged messages "
 python parser-filtering.py $dir 
 
