@@ -1,0 +1,108 @@
+starting claim 3
+using statement merging
+Never claim moves to line 238	[(1)]
+                  CONTRACT RULE MANAGER 27:	proc  1 (BEG:1) ./BizOperation.h:389 Send BUYRQ,S	-> queue 1 (BEG2CRM)
+ 29:	proc  2 (CRM:1) ./BizOperation.h:376 [Recv] BUYRQ,S	<- queue 1 (BEG2CRM)
+ 31:	proc  2 (CRM:1) ./BizOperation.h:376 Recv BUYRQ,S	<- queue 1 (BEG2CRM)
+                  
+
+                  <event>
+                  <originator>buyer</originator>
+                  <responder>store</responder>
+                  <type>BUYREQ</type>
+                  <status>success</status>
+                  </event>                  
+
+ 63:	proc  2 (CRM:1) ./BizOperation.h:411 Sent CCR,CO	-> queue 2 (CRM2BEG)
+ 64:	proc  1 (BEG:1) ./BizOperation.h:396 Recv CCR,CO	<- queue 2 (CRM2BEG)
+ 69:	proc  1 (BEG:1) ./BizOperation.h:389 Send REJ,BF	-> queue 1 (BEG2CRM)
+ 71:	proc  2 (CRM:1) ./BizOperation.h:377 [Recv] REJ,BF	<- queue 1 (BEG2CRM)
+ 72:	proc  2 (CRM:1) ./BizOperation.h:377 Recv REJ,BF	<- queue 1 (BEG2CRM)
+                  
+
+                  <event>
+                  <originator>store</originator>
+                  <responder>buyer</responder>
+                  <type>BUYREJ</type>
+                  <status>bizfail</status>
+                  </event>                  
+
+                  First Rej-BusinessFailure 76:	proc  2 (CRM:1) ./BizOperation.h:411 Sent CCO,CO	-> queue 2 (CRM2BEG)
+ 77:	proc  1 (BEG:1) ./BizOperation.h:396 Recv CCO,CO	<- queue 2 (CRM2BEG)
+Never claim moves to line 237	[(((buyrj==1)||((pay==1)||((canc==1)||((rejconfto==1)||((paycancto==1)||((paybizfail==1)||((rejbizfail==1)||((buyreqbizfail==1)||((confbizfail==1)||((cancbizfail==1)||(getvoubizfail==1))))))))))))]
+ 84:	proc  1 (BEG:1) ./BizOperation.h:389 Send CONF,BF	-> queue 1 (BEG2CRM)
+Never claim moves to line 242	[(((buyrj==1)||((pay==1)||((canc==1)||((rejconfto==1)||((paycancto==1)||((paybizfail==1)||((rejbizfail==1)||((buyreqbizfail==1)||((confbizfail==1)||((cancbizfail==1)||(getvoubizfail==1))))))))))))]
+ 86:	proc  2 (CRM:1) ./BizOperation.h:377 [Recv] CONF,BF	<- queue 1 (BEG2CRM)
+ 88:	proc  2 (CRM:1) ./BizOperation.h:377 Recv CONF,BF	<- queue 1 (BEG2CRM)
+                  
+
+                  <event>
+                  <originator>store</originator>
+                  <responder>buyer</responder>
+                  <type>BUYCONF</type>
+                  <status>bizfail</status>
+                  </event>                  
+
+                  First BuyConf-BusinessFailure102:	proc  2 (CRM:1) ./BizOperation.h:411 Sent CCO,CO	-> queue 2 (CRM2BEG)
+103:	proc  1 (BEG:1) ./BizOperation.h:396 Recv CCO,CO	<- queue 2 (CRM2BEG)
+111:	proc  1 (BEG:1) ./BizOperation.h:389 Send CONF,S	-> queue 1 (BEG2CRM)
+113:	proc  2 (CRM:1) ./BizOperation.h:376 [Recv] CONF,S	<- queue 1 (BEG2CRM)
+115:	proc  2 (CRM:1) ./BizOperation.h:376 Recv CONF,S	<- queue 1 (BEG2CRM)
+                  
+
+                  <event>
+                  <originator>store</originator>
+                  <responder>buyer</responder>
+                  <type>BUYCONF</type>
+                  <status>success</status>
+                  </event>                  
+
+                  CONF-Success159:	proc  2 (CRM:1) ./BizOperation.h:411 Sent CCO,CO	-> queue 2 (CRM2BEG)
+160:	proc  1 (BEG:1) ./BizOperation.h:396 Recv CCO,CO	<- queue 2 (CRM2BEG)
+168:	proc  1 (BEG:1) ./BizOperation.h:389 Send PAY,S	-> queue 1 (BEG2CRM)
+170:	proc  2 (CRM:1) ./BizOperation.h:376 [Recv] PAY,S	<- queue 1 (BEG2CRM)
+171:	proc  2 (CRM:1) ./BizOperation.h:376 Recv PAY,S	<- queue 1 (BEG2CRM)
+                  
+
+                  <event>
+                  <originator>buyer</originator>
+                  <responder>store</responder>
+                  <type>BUYPAY</type>
+                  <status>success</status>
+                  </event>                  
+
+178:	proc  2 (CRM:1) ./BizOperation.h:411 Sent CCO,CO	-> queue 2 (CRM2BEG)
+179:	proc  1 (BEG:1) ./BizOperation.h:396 Recv CCO,CO	<- queue 2 (CRM2BEG)
+189:	proc  1 (BEG:1) ./BizOperation.h:389 Send GETVOU,S	-> queue 1 (BEG2CRM)
+191:	proc  2 (CRM:1) ./BizOperation.h:376 [Recv] GETVOU,S	<- queue 1 (BEG2CRM)
+192:	proc  2 (CRM:1) ./BizOperation.h:376 Recv GETVOU,S	<- queue 1 (BEG2CRM)
+                  
+
+                  <event>
+                  <originator>buyer</originator>
+                  <responder>store</responder>
+                  <type>GETVOU</type>
+                  <status>success</status>
+                  </event>                  
+
+                  
+
+                  <event>
+                  <originator>ccc</originator>
+                  <responder>nobody</responder>
+                  <type>NORIGHTTOGETVOU</type>
+                  <status>notification</status>
+                  </event>                  
+
+                  GETVOU-Success!!!
+                  
+
+                  <event>
+                  <originator>reset</originator>
+                  <responder>reset</responder>
+                  <type>reset</type>
+                  <status>reset</status>
+                  </event>                  
+
+  <<<<<START OF CYCLE>>>>>
+spin: trail ends after 201 steps
