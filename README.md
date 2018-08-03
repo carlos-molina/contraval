@@ -110,7 +110,7 @@ also includes examples that demonstrate its operation.
 
 # Contributors
 
-*  Abubkr A. Abdelsadiq: developed the macros as part of his
+*  Abubkr A. Abdelsadiq developed the macros as part of his
    PhD dissertation (2012) at University of Newcastle, UK.
 *  Ionnis Sfyrakis from University of Newcastle, UK
    (Ioannis.Sfyrakis@newcastle.ac.uk) implemented 
