@@ -94,7 +94,7 @@ also includes examples that demonstrate its operation.
 # Bug reporting and comments
 
 Feel free to email 
-[carlos.molina@cl.cam.a.uk](mailto:carlos.molina@cl.cam.ac.uk) 
+[carlos.molina + @ + cl.cam.a.uk](mailto:carlos.molina@cl.cam.ac.uk) 
 if you have comments, bugs to report or questions.
 
 
