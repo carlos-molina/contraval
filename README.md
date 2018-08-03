@@ -41,8 +41,8 @@ possibly to other parties that are entitled to
 follow the execution of the contract.
 
 An schematic view of the execution model is
-shown in the figure.
+shown in the following figure.
 
 <p align="center">
-  <img src="./figures/executionModelOfBilateralOperations.png" width="350" title="Execution model of contractual operations.">
+  <img src="./figures/executionModelOfBilateralOperations.png" width="550" title="Execution model of contractual operations.">
 </p>
