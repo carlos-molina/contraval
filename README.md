@@ -23,8 +23,8 @@ implementing buggy is exacerbated by the interaction between
 the the components.
 
 <br/>
-An example of business contract between a `buyer` and
-a `store` that includes typical 
+An example of business contract between a *buyer* and
+a *store* that includes typical 
 operations is shown in the figure bellow. 
 
 <p align="center">
@@ -94,8 +94,8 @@ shown in the following figure.
   <img src="./figures/executionModelOfBilateralOperations.png" width="550" title="Execution model of contractual operations.">
 </p>
 
-In the figure, _oper_ stands for contractual operation, such as
-_BuyReq_, _Pay_, _Conf_, etc.
+In the figure, *oper* stands for contractual operation, such as
+*BuyReq*, *Pay*, *Conf*, etc.
 
 ### Business event generator 
 At the heart of epromela lies a Business Event Generator
