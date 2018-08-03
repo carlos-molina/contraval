@@ -86,6 +86,19 @@ for evaluation for contract compliance.
 
 # Installation
 
-The directions for installation of epromela can detailed in
-the [UserGuide_v1.2.pdf](./UserGuide_v1.2.pdf) file.
+The directions for installation of epromela are documented in
+the [UserGuide_v1.2.pdf](./UserGuide_v1.2.pdf) file. The document
+also includes examples that demonstrate its operation.
+
+
+# Bug reporting and comments
+
+Feel free to email 
+[carlos.molina@cl.cam.a.uk](mailto:carlos.molina@cl.cam.ac.uk) 
+if you have comments, bugs to report or questions.
+
+
+# Licence
+The contraval tool is released under the Apache License, 
+Version 2.0 which is available from Apache’s web pages.
  
