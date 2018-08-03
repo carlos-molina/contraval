@@ -6,6 +6,24 @@ building models of smart contracts that can
 be validated by the Spin model checker.
 <br/>
 
+### Validate your smart contract before deployment
+A particularity of smart contracts deployed on--blockchain 
+is that because of their descentralisation and openess, 
+they are hard to amend after deployment. Therefore, we 
+suggest that smart contracts are thoroughly validated 
+(for example, using conventional model checking tools) 
+to uncover potential logical inconsistencies of their clauses 
+(omissions, contradictions, duplications, etc.). In addition, 
+we suggest that the actual implementation is systematically 
+tested before deployment. In hybrid architectures 
+(see for example,
+[Implementation of Smart Contracts Using Hybrid Architectures with On- and Off-Blockchain Components](https://arxiv.org/pdf/1808.00093.pdf "paper")).
+that include on and off--blockchain components the risk of 
+implementing buggy is exacerbated by the interaction between 
+the the components.
+ 
+
+### Epromela, Promela and Spin
 Models are written in the epromela language which
 is standard Promela augmented with contructs for
 * expressing concepts that are inherent to 
@@ -20,7 +38,7 @@ cases (execution sequences)**.
 
 ### Model checking 
  Spin can verify the logical consistency of the model
- epromela model of the smart contract against correctness 
+ epromela of the smart contract against correctness 
  properties written 
  in LTL (Linear Temporal Logics) formulae. <br />
 
@@ -52,9 +70,9 @@ declares business failure.
 
 To agree on the outcome of each operation and be able
 to progress to the next one in harmony, the parties
-rely on a synchronizer that is responsible for 
+rely on an output synchronizer that is responsible for 
 receiving the individual outcomes, compute a single
-outcome and notify it to the contractual paarties and
+outcome and notify it to the contractual parties and
 possibly to other parties that are entitled to
 follow the execution of the contract.
 
