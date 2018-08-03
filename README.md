@@ -19,4 +19,31 @@ checker for:<br />
  actual implementation of the smaert
  contract.
 
-![Alt text](f.png?raw=true "Simonpere")
+## Execution model of bilateral operations 
+Contractual opertations are bilateral in the sense that
+their execution requires the interaction of the two
+business partners. 
+Upon completion of the execution of a given operation
+each party independently declares its local outcome:
+success, business failure or technical failure.
+
+Since the parties operate in a loosely coupled mode,
+their outcomes does not necessarily match. For instance
+a party might declare success whereas its counterpart
+declares business failure.
+
+To agree on the outcome of each operation and be able
+to progress to the next one in harmony, the parties
+rely on a synchronizer that is responsible for 
+receiving the individual outcomes, compute a single
+outcome and notify it to the contractual paarties and
+possibly to other parties that are entitled to
+follow the execution of the contract.
+
+An schematic view of the execution model is
+shown in the figure.
+
+
+![Alt text](./figures/executionModelOfBilateralOperations.png?raw=true "Simonpere")
+
+![Alt text](/figures/executionModelOfBilateralOperations.png?raw=true "Marco")
