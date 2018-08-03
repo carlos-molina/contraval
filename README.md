@@ -1,12 +1,13 @@
 
-# contraval
+# contraval (smart contract validation)
 
-contraval (Contract Validator) is a tool for
+This repository hosts **epromela** ---a tool for
 building models of smart contracts that can
-be presented to the Spin model checker to
+be validated by the Spin model checker.
 
-* model check them
-* generate test cases (execution sequences)
+An epromela model can be presented to Spin 
+for **model checking** it and **generating test 
+cases (execution sequences)**.
 <br/>
 
 Models are written in the epromela language which
@@ -19,19 +20,22 @@ is standard Promela augmented with contructs for
 
 
 ## Model checking 
- Verifying its logical consistency of the model
- against correctness properties written as 
- LTL (Linear Temporal Logics) formulae. <br />
+ Spin can verify the logical consistency of the model
+ epromela model of the smart contract against correctness 
+ properties written 
+ in LTL (Linear Temporal Logics) formulae. <br />
 
-## Testing
- Generating the execution sequences
- implicit in the model. Such sequences
- can be used as test cases against the
- actual implementation of the smaert
- contract.
+## Generation of execution sequences (test cases) 
+ Spin can be instructed to generate all the execution
+ sequences encoded in the epromela model of the
+ smart contract. The basic idea is to use Spin as a
+ generator of counterexamples produced against 
+ LTL formulae.
 
-## Execution model of bilateral operations 
-Contractual opertations are bilateral in the sense that
+
+
+## Execution model of bilateral operations with potential exceptions 
+Contractual operations are bilateral in the sense that
 their execution requires the interaction of the two
 business partners. 
 Upon completion of the execution of a given operation
