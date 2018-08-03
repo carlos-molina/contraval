@@ -28,7 +28,7 @@ a _store_ that includes typical
 operations is shown in the figure bellow. 
 
 <p align="center">
-  <img src="./figures/dataseller.pdf" width="550" title="Buyer-DataSeller contract.">
+  <img src="./figures/dataseller.png" width="550" title="Buyer-DataSeller contract.">
 </p>
 
 
