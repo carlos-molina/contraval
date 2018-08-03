@@ -1,10 +1,21 @@
 
 # contraval
 
-contraval (Contract Validator) is a tool
-building abstract models of smart contracts. An 
-EPROMELA model can be exposed to the SPIN model 
-checker for:<br />
+contraval (Contract Validator) is a tool for
+building models of smart contracts that can
+be presented to the Spin model checker to
+
+* model check them
+* generate test cases (execution sequences)
+<br/>
+
+Models are written in the epromela language which
+is standard Promela augmented with contructs for
+* expressing concepts that are inherent to 
+  business contracts such as role players,
+  rights, obligations and prohibitions; and
+* executing operations with them such as grant right
+  to buyer, cancel seller's obligation, etc. 
 
 
 ## Model checking 
