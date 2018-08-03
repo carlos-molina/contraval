@@ -24,9 +24,6 @@ the the components.
 
 <br/>
 
-In the figure, *oper* stands for contractual operation, such as
-*BuyReq*, *Pay*, *Conf*, *buyer*,  etc.
-
 An example of business contract between a *buyer* and
 a *store* that includes typical 
 operations is shown in the figure bellow. 
