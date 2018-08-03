@@ -73,7 +73,8 @@ their execution requires the interaction of the two
 business partners. 
 Upon completion of the execution of a given operation
 each party independently declares its local outcome:
-success, business failure or technical failure.
+success, business failure (bizfail) or technical 
+failure (tecfail).
 
 Since the parties operate in a loosely coupled mode,
 their outcomes does not necessarily match. For instance
