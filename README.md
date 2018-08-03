@@ -21,7 +21,18 @@ tested before deployment. In hybrid architectures
 that include on and off--blockchain components the risk of 
 implementing buggy is exacerbated by the interaction between 
 the the components.
- 
+
+<br/>
+An example of business contract between a _buyer_ and
+a _store_ that includes typical 
+operations is shown in the figure bellow. 
+
+<p align="center">
+  <img src="./figures/dataseller.pdf" width="550" title="Buyer-DataSeller contract.">
+</p>
+
+
+
 
 ### Epromela, Promela and Spin
 Models are written in the epromela language which
@@ -83,6 +94,8 @@ shown in the following figure.
   <img src="./figures/executionModelOfBilateralOperations.png" width="550" title="Execution model of contractual operations.">
 </p>
 
+In the figure, _oper_ stands for contractual operation, such as
+_BuyReq_, _Pay_, _Conf_, etc.
 
 ### Business event generator 
 At the heart of epromela lies a Business Event Generator
