@@ -108,6 +108,18 @@ The directions for installation of epromela are documented in
 the [UserGuide_v1.2.pdf](./UserGuide_v1.2.pdf) file. The document
 also includes examples that demonstrate its operation.
 
+# Contributors
+
+*  Abubkr A. Abdelsadiq: developed the macros as part of his
+   PhD dissertation (2012) at University of Newcastle, UK.
+*  Ionnis Sfyrakis from University of Newcastle, UK
+   (Ioannis.Sfyrakis@newcastle.ac.uk) implemented 
+   the Python parsers to extract execution sequences during his
+   Masters degree (2012) at Newcastle.
+*  Carlos Molina from University of Cambridge 
+   (Carlos.Molina@cl.cam.ac.uk) implemented shell scripts to 
+   mechanise the extraction of execution sequences. He has been
+   maintaining, documenting and testing the tool.
 
 # Bug reporting and comments
 
