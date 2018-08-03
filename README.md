@@ -23,8 +23,8 @@ implementing buggy is exacerbated by the interaction between
 the the components.
 
 <br/>
-An example of business contract between a _buyer_ and
-a _store_ that includes typical 
+An example of business contract between a __buyer__ and
+a __store__ that includes typical 
 operations is shown in the figure bellow. 
 
 <p align="center">
