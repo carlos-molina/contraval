@@ -47,3 +47,8 @@ shown in the figure.
 ![Alt text](./figures/executionModelOfBilateralOperations.png?raw=true "Simonpere")
 
 ![Alt text](/figures/executionModelOfBilateralOperations.png?raw=true "Marco")
+
+<p align="center">
+  <img src="./figures/executionModelOfBilateralOperations.png" width="350" title="Panocho Pa">
+  <img src="./figures/executionModelOfBilateralOperations.png" width="350" alt="accessibilitytext Reye">
+</p>
