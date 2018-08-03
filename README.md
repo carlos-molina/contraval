@@ -4,10 +4,6 @@
 This repository hosts **epromela** ---a tool for
 building models of smart contracts that can
 be validated by the Spin model checker.
-
-An epromela model can be presented to Spin 
-for **model checking** it and **generating test 
-cases (execution sequences)**.
 <br/>
 
 Models are written in the epromela language which
@@ -18,6 +14,9 @@ is standard Promela augmented with contructs for
 * executing operations with them such as grant right
   to buyer, cancel seller's obligation, etc. 
 
+An epromela model can be presented to Spin 
+for **model checking** it and **generating test 
+cases (execution sequences)**.
 
 ## Model checking 
  Spin can verify the logical consistency of the model
