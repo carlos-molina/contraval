@@ -27,6 +27,9 @@ An example of business contract between a *buyer* and
 a *store* that includes typical 
 operations is shown in the figure bellow. 
 
+In the figure, *oper* stands for contractual operation, such as
+*BuyReq*, *Pay*, *Conf*, *buyer*,  etc.
+
 <p align="center">
   <img src="./figures/dataseller.png" width="550" title="Buyer-DataSeller contract.">
 </p>
