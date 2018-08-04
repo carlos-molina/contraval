@@ -105,7 +105,7 @@ A copy of each message can be sent to third parties
 (for example, to a smart contract) as shown in the figure.
 
 <p align="center">
-  <img src="./figures/buyer-store-executionWithoutFailures.png" width="550" title="Execution model of contractual operations.">
+  <img src="./figures/buyer-store-executionWithoutFailures.png" width="350" title="Execution model of contractual operations.">
 </p>
 
 
