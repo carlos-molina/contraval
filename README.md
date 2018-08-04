@@ -130,6 +130,22 @@ generates the business events by itself as shown in the figure.
 </p>
 
 
+### Epromela model of the contract example
+The smart contract oriented primitives provided by epromela 
+help developers build models
+that describe the behaivour of contractual interactions is an
+intuitive manner. The figure bellow shows the two main
+components of an epromela model, namely, the *BEG* and
+the *set of rules*. It is based on the contract example,
+consequently, the set of rules (stored in the rules.h
+files) includes only two rules, one for each 
+business operation.
+
+<p align="center">
+  <img src="./figures/epromelaModelOfBuyerStoreContract.png" 
+   width="400" title="epromela model of the buyer-store example.">
+</p>
+
 
 ### Execution model of bilateral operations with potential exceptions 
 A salient feature of epromela is that it can model
