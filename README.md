@@ -29,7 +29,7 @@ a *store* that includes typical
 operations is shown in the figure bellow. 
 
 <p align="center">
-  <img src="./figures/dataseller.png" width="550" title="Buyer-DataSeller contract.">
+  <img src="./figures/helloWorldSmartContractBuyerStore.png" width="550" title="Hello world contract: buyer-store">
 </p>
 
 
