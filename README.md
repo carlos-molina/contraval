@@ -35,17 +35,25 @@ operations is shown in the figure bellow.
 
 
 
-### Epromela, Promela and Spin
-Models are written in the epromela language which
-is standard Promela augmented with contructs for
-* expressing concepts that are inherent to 
-  business contracts such as role players,
-  rights, obligations and prohibitions; and
-* executing operations with them such as grant right
-  to buyer, cancel seller's obligation, etc. 
+### What can Epromela do with smart contracts?
+Epromela is a language for writing models that
+can be model checked by the Spin model checker. 
+
+We have built it by extending the standard Promela language
+with primitives that help developers build
+models of smart contracts using constructs that
+are natural to smart contracts. Examples of
+these constructs are *role players, such as
+buyer and seller*, *rights*,
+*obligations* and *prohibitions*; and operations
+such as *assign obligation to pay 
+to buyer*, *has buyer fulfilled obligation to pay?*,
+*cancel buyer's obligation to pay*,
+etc. 
+
 
 An epromela model can be presented to Spin 
-for **model checking** it and **generating test 
+for **model checking** and **generating test 
 cases (execution sequences)**.
 
 ### Model checking 
