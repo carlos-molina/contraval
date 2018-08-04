@@ -29,21 +29,35 @@ at a helloWorld example of a smart contract between
 a buyer and a store:
 
 ```
-1. the
-1. the s
-
+1. The buyer is obliged to pay the store withing the
+   next 3 days. 
+1. The store is obliged to acknowledge the payment 
+   withing 24 hrs after receiving it. 
+1. The contract will be considered complete either
+* normally when the store submits the acknowledge.
+* abnormally when one or both parties fail to meet
+  their deadlines.
 ```
-
-An example of business contract between a *buyer* and
-a *store* that includes typical 
-operations is shown in the figure bellow. 
+An schematic representation of the contract is shown in the
+figure.
 
 <p align="center">
   <img src="./figures/helloWorldSmartContractBuyerStore.png" width="550" title="Hello world contract: buyer-store">
 </p>
 
-
-
+In the figure, *pay*  represents the execution
+of the *pay*  operation initiated by the buyer.
+Similarly, *ack* represens the execution of the
+*ack* operation initiated by the store.
+These executions, result in the generation of
+business events that are notified to the
+smart contract (see below), for example, the
+execution of the operation *pay* generates the
+*pay* business event.
+A diamon represents an alternative execution 
+split, *O* stands for obligation and *TO* 
+stands for Time Out. The dashed lines 
+represent abnormal paths to contract completion.
 
 ### What can Epromela do with smart contracts?
 Epromela is a language for writing models that
