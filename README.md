@@ -24,6 +24,16 @@ the the components.
 
 <br/>
 
+HelloWorld example: As an example, let as have a look
+at a helloWorld example of a smart contract between
+a buyer and a store:
+
+```
+1. the
+1. the s
+
+```
+
 An example of business contract between a *buyer* and
 a *store* that includes typical 
 operations is shown in the figure bellow. 
