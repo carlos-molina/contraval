@@ -169,8 +169,7 @@ In the figure, *oper* stands for contractual operation, such as
 *BuyReq*, *Pay*, *Conf*, etc.
 
 <br/>
-Like in the execution model that does not account
-for failures, the BEG abstracts 
+In this execution model, the BEG abstracts 
 away the communication between the contracting parties and
 plays the role of the output synchronizer as shown in the
 figure.
