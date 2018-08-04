@@ -58,6 +58,10 @@ A diamon represents an alternative execution
 split, *O* stands for obligation and *TO* 
 stands for Time Out. The dashed lines 
 represent abnormal paths to contract completion.
+Thus, the diamon on the right side stipulates that
+the store has an obligation to execute the operation
+*ack* by a time out (TO), which corresponds to the
+24 hrs deadline in this example.
 
 ### What can Epromela do with smart contracts?
 Epromela is a language for writing models that
@@ -92,6 +96,17 @@ cases (execution sequences)**.
  smart contract. The basic idea is to use Spin as a
  generator of counterexamples produced against 
  LTL formulae.
+
+
+### Execution of bilateral operations
+The execution of each contractual operation results in the
+exchange of messages between the two contractual parties.
+A copy of each message can be sent to third parties
+(for example, to a smart contract) as shown in the figure.
+
+<p align="center">
+  <img src="./figures/buyer-store-executionWithoutFailures.png" width="550" title="Execution model of contractual operations.">
+</p>
 
 
 
