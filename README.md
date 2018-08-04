@@ -43,8 +43,8 @@ We have built it by extending the standard Promela language
 with primitives that help developers build
 models of smart contracts using constructs that
 are natural to smart contracts. Examples of
-these constructs are *role players, such as
-buyer and seller*, *rights*,
+these constructs are *role players (e.g.,
+buyer and seller)*, *rights*,
 *obligations* and *prohibitions*; and operations
 such as *assign obligation to pay 
 to buyer*, *has buyer fulfilled obligation to pay?*,
