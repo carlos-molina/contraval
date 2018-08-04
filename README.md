@@ -133,13 +133,20 @@ generates the business events by itself as shown in the figure.
 ### Epromela model of the contract example
 The smart contract oriented primitives provided by epromela 
 help developers build models
-that describe the behaivour of contractual interactions is an
+that describe the behaivour of contractual interactions in an
 intuitive manner. The figure bellow shows the two main
 components of an epromela model, namely, the *BEG* and
 the *set of rules*. It is based on the contract example,
-consequently, the set of rules (stored in the rules.h
+consequently, the set of rules (stored in the *rules.h*
 files) includes only two rules, one for each 
 business operation.
+The two rules include the contruct *IS_O*, where *O* stands 
+for obligation, therefore, the construct reads _is obligation_.
+*IS_O* is an illustrative example of the contract oriented primitives
+that epromela offers. In *Rule(pay)*, *IS_O* indicates that
+the rule will trigger only when it receives
+the event *pay* and the buyer has a pending obligation
+to pay.
 
 <p align="center">
   <img src="./figures/epromelaModelOfBuyerStoreContract.png" 
