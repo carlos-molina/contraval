@@ -140,6 +140,7 @@ the *set of rules*. It is based on the contract example,
 consequently, the set of rules (stored in the *rules.h*
 files) includes only two rules, one for each 
 business operation.
+
 The two rules include the contruct *IS_O*, where *O* stands 
 for obligation, therefore, the construct reads _is obligation_.
 *IS_O* is an illustrative example of the contract oriented primitives
