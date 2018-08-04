@@ -97,6 +97,35 @@ cases (execution sequences)**.
  generator of counterexamples produced against 
  LTL formulae.
 
+### Business Event Generator of epromela
+At the heart of epromela lies a Business Event
+Generator (BEG) that is responsible for 
+generating the events that correspond to the
+execution of contractual operations. To
+appreciate its functionality, let us have a look
+at the figure bellow that shows the interaction
+between the buyer and store of the contract example.
+
+<p align="center">
+  <img src="./figures/buyer-store-executionWithoutFailures.png" 
+   width="400" title="Execution model of contractual operations.">
+</p>
+
+As shown in the figure, the execution of each contractual 
+operation results in the exchange of messages between the two 
+contractual parties. A copy of each message can be sent to third 
+parties (for example, to a smart contract) as shown in the 
+figure.
+
+To reduce the number of states of the model, the BEG abstracts 
+away the communication between the contracting parties and
+generates the business events by itself as shown in the figure.
+
+<p align="center">
+  <img src="./figures/buyer-store-executionWithoutFailuresBEG.png" 
+   width="400" title="Execution model of contractual operations.">
+</p>
+
 
 ### Execution of bilateral operations
 The execution of each contractual operation results in the
