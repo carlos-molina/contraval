@@ -176,7 +176,7 @@ plays the role of the output synchronizer as shown in the
 figure.
  
 <p align="center">
-  <img src="./figures/executionModelOfBilateralOperationsWithFailures.pngBEG" width="550" title="Execution model of contractual 
+  <img src="./figures/executionModelOfBilateralOperationsWithFailuresBEG.png" width="550" title="Execution model of contractual 
                   operations with failures, BEG.">
 </p>
 
