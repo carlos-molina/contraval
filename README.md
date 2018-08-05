@@ -220,8 +220,8 @@ also includes examples that demonstrate its operation.
    (Ioannis.Sfyrakis@newcastle.ac.uk) implemented 
    the Python parsers to extract execution sequences during his
    Masters degree (2012) at Newcastle.
-*  **[Carlos Molina-Jimenez]
-   (https://www.cl.cam.ac.uk/~cm770/)**
+*  [Carlos Molina-Jimenez]
+   (https://www.cl.cam.ac.uk/~cm770/ "MyWebPage")
     from **The Department of
      Computer Science and Technology (Computer Laboratory),
      University of Cambridge** 
