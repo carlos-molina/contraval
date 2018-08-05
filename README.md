@@ -220,7 +220,8 @@ also includes examples that demonstrate its operation.
    (Ioannis.Sfyrakis@newcastle.ac.uk) implemented 
    the Python parsers to extract execution sequences during his
    Masters degree (2012) at Newcastle.
-*  Carlos Molina from University of Cambridge 
+*  *Carlos Molina-Jimenez* from *The Computer Laboratory,
+    University of Cambridge* 
    (Carlos.Molina@cl.cam.ac.uk) implemented shell scripts to 
    mechanise the extraction of execution sequences. He has been
    maintaining, documenting and testing the tool.
