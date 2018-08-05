@@ -154,6 +154,13 @@ to pay.
    width="400" title="epromela model of the buyer-store example.">
 </p>
 
+If you are motivated to run the hello world example,
+you can find the complete code (and instructions to tun it)
+at the [example/helloWorldSmartContract] 
+(https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContract) folder.
+
+
+
 
 ### Execution model of bilateral operations with potential exceptions 
 A salient feature of epromela is that it can model
