@@ -226,6 +226,11 @@ also includes examples that demonstrate its operation.
    (Carlos.Molina@cl.cam.ac.uk) implemented shell scripts to 
    mechanise the extraction of execution sequences. He has been
    maintaining, documenting and testing the tool.
+   He currently (2018) working in the 
+   [TESCON project](https://www.cl.cam.ac.uk/~cm770/tescon/tescon.html 
+   "TESCON webpage") (EPSRC grant Grant: RG90413 NRAG/536).
+
+
 
 # Bug reporting and comments
 
