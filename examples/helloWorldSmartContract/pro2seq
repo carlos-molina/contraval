@@ -1,0 +1,108 @@
+#!/bin/bash
+#
+# Programmer: Carlos Molina Jimenez, Newcastle Univ, 7 Sep 2012
+#
+# Programme: Given a Promela model as input, this
+#            shell generates the execution sequences
+# included in the model as sequences of xml-tagged
+# messages. 
+#
+# 1) The promela model is expected to generate counter
+# examples with messages tagged as in the following
+# format.
+#<event>
+# <originator>buyer</originator>
+# <responder>store</responder>
+# <type>BUYRQ</type>
+# <status>success</status>
+#</event>
+#          
+# 2) The xml tagged messages are stored in a folder
+#    colled <PromelaModel>ExecSeq-xml where <PromelaModel>
+# is the name of the file with the Promela model which
+# is type as input.
+#
+# 3) The shell generates up to 500 trail files. This
+# number can be altered by editing the -c500 
+# parameter in pan -a -e -c500
+#
+# 4) The shell ask for the number of execution sequences
+#to generate, this number MUST BE equal or less than
+#the number of trail files iactually produced (not
+#the number specified in -c500, but the number of
+#trail files produced by Spin which is not known...
+#this step needs improving.
+#
+# 5) This shell is meant to show that the generation
+#of sequences can be automated. It is not a final
+#product. 
+# 
+echo -ne "Type PromelaModel name (ex dataseller.pml) followed by [ENTER]:"
+read PromelaModel
+
+echo "Generating  pan.c for $NPromelaModel ..."
+spin -a $PromelaModel
+
+echo "Compiling pan.c to generate pan verifier for $NPromelaModel ..."
+cc -o pan pan.c
+
+echo "Generating up to 500 trail files (counterex) from pan verifier for $NPromelaModel ..."
+pan -a -e -c500
+
+#echo -ne "Type Promela filename (ex buyerstore) followed by [ENTER]:"
+#read PromelaFileName
+echo " "
+echo -ne "Type Num of execution sequences (ex 1, 12, 100) followed by [ENTER]:"
+read Ntrail 
+
+#forder for execution sequence files
+dir="$PromelaModel""ExecSeq"
+
+if [ -d $dir ]; then     
+   echo " $dir exists, I'm deleting it ... "    
+   rm -r $dir 
+   echo " I've created a new $dir ... "    
+   mkdir $dir
+else 
+   echo " $dir did not exist, I've created it ... "    
+   mkdir $dir
+fi
+
+echo "Generating  $Ntrail  execution sequences ..."
+i="1"
+while [ $i -le $Ntrail ]
+do
+ spin -t"$i" -s -r -B $PromelaModel > "./$dir/""$PromelaModel"ExecSeq"$i"
+ i=$[$i+1]
+done
+echo "Generation of execution sequences done!..."
+#
+echo " "
+echo " "
+echo "Deleting *.trail files... "
+rm ./*.trail
+echo " "
+echo "*.trail files deleted !..."
+
+echo " "
+echo "Preparation of $dir"-xml" for the parser... "
+if [ -d $dir"-xml" ]; then     
+   echo "  $dir"-xml" exists, I'm deleting it ... "    
+   rm -r $dir"-xml" 
+   echo " I've deleted $dir"-xml" ... "    
+else 
+   echo " $dir"-xml" does not exist, the parser will created it ... " 
+fi
+
+echo " "
+# This parser was written by Ioannis Sfyrakis in Sep2012
+echo "Calling python filter to generate xml tagged messages "
+python parser-filtering.py $dir 
+
+echo " "
+echo " "
+echo "Congratulations, all done, find xml-tagged messages from $dir"-xml" folder... "
+echo " "
+echo " "
+#
+#

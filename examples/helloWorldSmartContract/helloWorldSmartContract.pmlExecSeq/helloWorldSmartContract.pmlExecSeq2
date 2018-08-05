@@ -1,0 +1,44 @@
+starting claim 3
+using statement merging
+Never claim moves to line 170	[(1)]
+                  CONTRACT RULE MANAGER 19:	proc  1 (BEG:1) ./BizOperation.h:389 Send PAY,S	-> queue 1 (BEG2CRM)
+ 21:	proc  2 (CRM:1) ./BizOperation.h:376 [Recv] PAY,S	<- queue 1 (BEG2CRM)
+ 23:	proc  2 (CRM:1) ./BizOperation.h:376 Recv PAY,S	<- queue 1 (BEG2CRM)
+                  
+
+                  <event>
+                  <originator>buyer</originator>
+                  <responder>store</responder>
+                  <type>PAY</type>
+                  <status>success</status>
+                  </event>                  
+
+ 55:	proc  2 (CRM:1) ./BizOperation.h:411 Sent CCO,CO	-> queue 2 (CRM2BEG)
+ 56:	proc  1 (BEG:1) ./BizOperation.h:396 Recv CCO,CO	<- queue 2 (CRM2BEG)
+ 64:	proc  1 (BEG:1) ./BizOperation.h:389 Send ACK,S	-> queue 1 (BEG2CRM)
+ 66:	proc  2 (CRM:1) ./BizOperation.h:376 [Recv] ACK,S	<- queue 1 (BEG2CRM)
+ 67:	proc  2 (CRM:1) ./BizOperation.h:376 Recv ACK,S	<- queue 1 (BEG2CRM)
+                  
+
+                  <event>
+                  <originator>store</originator>
+                  <responder>buyer</responder>
+                  <type>ACK</type>
+                  <status>success</status>
+                  </event>                  
+
+                  
+
+                  <event>
+                  <originator>reset</originator>
+                  <responder>reset</responder>
+                  <type>reset</type>
+                  <status>reset</status>
+                  </event>                  
+
+ 75:	proc  2 (CRM:1) ./BizOperation.h:411 Sent CCO,CND	-> queue 2 (CRM2BEG)
+ 76:	proc  1 (BEG:1) ./BizOperation.h:396 Recv CCO,CND	<- queue 2 (CRM2BEG)
+Never claim moves to line 169	[((((ack==1)||(payto==1))||(ackto==1)))]
+Never claim moves to line 174	[((((ack==1)||(payto==1))||(ackto==1)))]
+  <<<<<START OF CYCLE>>>>>
+spin: trail ends after 81 steps
