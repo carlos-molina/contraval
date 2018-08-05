@@ -155,9 +155,8 @@ to pay.
 </p>
 
 If you are motivated to run the hello world example,
-you can find the complete code (and instructions to tun it)
-at the [example/helloWorldSmartContract] 
-(https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContract) folder.
+you can find the complete code (and instructions to run it)
+at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContract) folder.
 
 
 
