@@ -56,7 +56,14 @@ execution of the operation *pay* generates the
 *pay* business event.
 A diamon represents an alternative execution 
 split, *O* stands for obligation and *TO* 
-stands for Time Out. The dashed lines 
+stands for Time Out. In this model (there
+are other alternatives), the
+box at the right side of a diamon represents
+the sucessful execution of the operation,
+while the *TO* represents the expiration of the
+deadline to succssfully execute the operation.
+
+The dashed lines 
 represent abnormal paths to contract completion.
 Thus, the diamon on the right side stipulates that
 the store has an obligation to execute the operation
