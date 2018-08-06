@@ -157,7 +157,7 @@ to pay.
 If you are motivated to run the hello world example,
 you can find the complete code (and instructions to run it)
 at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContract) folder.
-A run of the model will produce all (three) the execution
+A run of the model will mechanically produce all (three) the execution
 sequences encoded in the model, namely:
 
 ```
