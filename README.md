@@ -38,11 +38,22 @@ a buyer and a store:
 * abnormally when one or both parties fail to meet
   their deadlines.
 ```
-An schematic representation of the contract is shown in the
-figure.
+The contract in natural language can be represented
+schematically. Depending on the execution model of the
+operations, diffent models can be built.
+
+As an example, let us assume the execution model shown in the
+following figure.
 
 <p align="center">
-  <img src="./figures/helloWorldSmartContractBuyerStore.png" width="550" title="Hello world contract: buyer-store">
+  <img src="./figures/executionmodelTOtoComplete.png" width="550" title="Execution model that completes in success or timeout">
+</p>
+
+On the basis of the exedcution model shown above, we can
+represent the contract example schematically.
+
+<p align="center">
+  <img src="./figures/helloWorldSmartContractBuyerStoreExecTO.png" width="550" title="Hello world contract: buyer-store">
 </p>
 
 In the figure, *pay*  represents the execution
@@ -163,7 +174,7 @@ to pay.
 
 If you are motivated to run the hello world example,
 you can find the complete code (and instructions to run it)
-at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContract) folder.
+at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContractExecOutSuccessOrTO) folder.
 A run of the model will mechanically produce all (three) the execution
 sequences encoded in the model, namely:
 
