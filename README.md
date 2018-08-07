@@ -190,7 +190,7 @@ different in comparison with the rules of the previous
 model.
 
 
-### Alternative model of the contract example
+### Alternative epromela model of the contract example
 The execution model of operations shown above is not unique. Another
 altrnative is shoen in the figure.
 
@@ -206,7 +206,7 @@ represent the contract example schematically
 in the following manner.
 
 <p align="center">
-  <img src="./figures/helloWorldSmartContractBuyerStoreInitiateTO.png.png" width="550" title="Hello world contract: buyer-store with init TO">
+  <img src="./figures/helloWorldSmartContractBuyerStoreInitiateTO.png" width="550" title="Hello world contract: buyer-store with init TO">
 </p>
 
 In the figure, *pay*  represents the execution
