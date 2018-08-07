@@ -184,14 +184,70 @@ sequences encoded in the model, namely:
 - pay -> ackto
 ```
 Where *payto* and *ackto* stand for expiration of time out to pay 
+and expiration of time out to ack, respectively. You will notice
+that the rules (included in the *rules.h* file) are slightly
+different in comparison with the rules of the previous
+model.
+
+
+### Alternative model of the contract example
+The execution model of operations shown above is not unique. Another
+altrnative is shoen in the figure.
+
+As an example, let us assume the execution model shown in the
+following figure.
+
+<p align="center">
+  <img src="./figures/executionmodelTOtoInitiate.png" width="550" title="Execution model that initiates or times out">
+</p>
+
+On the basis of this execution model, we can
+represent the contract example schematically
+in the following manner.
+
+<p align="center">
+  <img src="./figures/helloWorldSmartContractBuyerStoreInitiateTO.png.png" width="550" title="Hello world contract: buyer-store with init TO">
+</p>
+
+In the figure, *pay*  represents the execution
+of the *pay*  operation initiated by the buyer.
+Similarly, *ack* represens the execution of the
+*ack* operation initiated by the store.
+These executions, result in the generation of
+business events that are notified to the
+smart contract (see below), for example, the
+execution of the operation *pay* generates the
+*pay* business event.
+A diamon represents an alternative execution 
+split, *O* stands for obligation and *TO* 
+stands for Time Out. In this model (there
+are other alternatives), the
+box at the right side of a diamon represents
+the sucessful execution of the operation,
+while the *TO* represents the expiration of the
+deadline to succssfully execute the operation.
+
+The dashed lines 
+represent abnormal paths to contract completion.
+Thus, the diamon on the right side stipulates that
+the store has an obligation to execute the operation
+
+If you are motivated to run this alternative
+model of the  hello world example,
+you can find the complete code (and instructions to run it)
+at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContractInitOrTO) 
+folder.
+As in the model discussed earlier, a run of this
+model will mechanically produce all (three) the execution
+sequences encoded in the model, namely:
+
+```
+- payto
+- pay -> ack
+- pay -> ackto
+```
+Where *payto* and *ackto* stand for expiration of time out to pay 
 and expiration of time out to ack, respectively.
-
- 
-Section D of
-[Implementation of Smart Contracts Using Hybrid Architectures with On- and Off-Blockchain Components](https://arxiv.org/pdf/1808.00093.pdf "implementation paper")) explains where to find the sequences
-generated.
-
-
 
 
 
