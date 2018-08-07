@@ -31,9 +31,9 @@ a buyer and a store:
 ```
 1) The buyer is obliged to pay the store withing the
    next 3 days. 
-1) The store is obliged to acknowledge the payment 
+2) The store is obliged to acknowledge the payment 
    withing 24 hrs after receiving it. 
-1) The contract will be considered complete either
+3) The contract will be considered complete either
  * normally when the store submits the acknowledge.
  * abnormally when one or both parties fail to meet
   their deadlines.
