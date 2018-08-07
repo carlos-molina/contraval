@@ -65,21 +65,24 @@ business events that are notified to the
 smart contract (see below), for example, the
 execution of the operation *pay* generates the
 *pay* business event.
-A diamon represents an alternative execution 
-split, *O* stands for obligation and *TO* 
-stands for Time Out. In this model (there
-are other alternatives), the
-box at the right side of a diamon represents
-the sucessful execution of the operation,
-while the *TO* represents the expiration of the
-deadline to succssfully execute the operation.
+
+A diamon represents an alternative output 
+produced by the execution of the operation
+located at its left. In accordance with 
+the execution model, the outcome is either
+sucess or timeout. For example, *payto* (where
+*to* stands for timeout)
+presentes the failure of the execution of 
+the operation *pay* to complete before the deadline.
+
 
 The dashed lines 
 represent abnormal paths to contract completion.
-Thus, the diamon on the right side stipulates that
-the store has an obligation to execute the operation
-*ack* by a time out (TO), which corresponds to the
-24 hrs deadline in this example.
+For instance, the dashed line associated to *payto* 
+means that the buyer failed to observe its
+obligation to pay within 3 days. Consequently,
+the contract ends abnormally.
+
 
 ### What can Epromela do with smart contracts?
 Epromela is a language for writing models that
