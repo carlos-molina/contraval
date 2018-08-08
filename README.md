@@ -171,8 +171,9 @@ the event *pay* and the buyer has a pending obligation
 to pay.
 
 <p align="center">
-  <img src="./figures/epromelaModelOfBuyerStoreContract.png" 
-   width="400" title="epromela model of the buyer-store example.">
+  <img src="./figures/epromelaModelOfBuyerStoreContractOutputTO.png" 
+   width="400" title="epromela model of the buyer-store example with
+                      output TO.">
 </p>
 
 If you are motivated to run the hello world example,
@@ -230,14 +231,30 @@ the sucessful execution of the operation,
 while the *TO* represents the expiration of the
 deadline to succssfully execute the operation.
 
-The dashed lines 
-represent abnormal paths to contract completion.
-Thus, the diamon on the right side stipulates that
-the store has an obligation to execute the operation
+The dashed lines represent abnormal paths to contract 
+completion. They results from failures to meet
+deadlines.
 
-If you are motivated to run this alternative
+
+The epromela model includes four rules and is shown in
+the figure. Observe that the model includes two separate
+rules (for for the normal outcome and another for
+the timed out outcome) for handling each business 
+operation. For instance, there is a rule for handling
+*pay* and another one independent rule for handling
+*payto*.
+
+<p align="center">
+  <img src="./figures/epromelaModelOfBuyerStoreContractInitTO.png" 
+   width="400" title="epromela model of the buyer-store example with
+                      init  TO.">
+</p>
+
+
+
+Motivated readers are welcome to run this alternative
 model of the  hello world example,
-you can find the complete code (and instructions to run it)
+they can find the complete code (and instructions to run it)
 at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContractInitOrTO) 
 folder.
 As in the model discussed earlier, a run of this
