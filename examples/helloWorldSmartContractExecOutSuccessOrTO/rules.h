@@ -5,8 +5,9 @@
  *
  * Version: v.7Aug2018:
  *
- * Program: helloWorlSmartContract.pml is a hello-worls model 
- *          is written epromela. It shows the folowing actions:
+ * Program: helloWorlSmartContract.pml is the epromela model
+ *          of a Hello World contract. It shows the folowing 
+ *          actions:
  *          1) the buyer executes a pay operation to comply
  *             with its obligation to pay before a deadline.
  *          2) The execution of pay in time assigns the store
