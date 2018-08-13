@@ -24,8 +24,8 @@ the the components.
 
 <br/>
 
-HelloWorld example: As an example, let as have a look
-at a helloWorld example of a smart contract between
+Hello World Contract example: As an example, let as have a look
+at a hello world contract example of a smart contract between
 a buyer and a store:
 
 ```
@@ -176,7 +176,7 @@ to pay.
                       output TO.">
 </p>
 
-If you are motivated to run the hello world example,
+If you are motivated to run the hello world contract world example,
 you can find the complete code (and instructions to run it)
 at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContractExecOutSuccessOrTO) folder.
 A run of the model will mechanically produce all (three) the execution
@@ -253,7 +253,7 @@ operation. For instance, there is a rule for handling
 
 
 Motivated readers are welcome to run this alternative
-model of the  hello world example,
+model of the  hello world contract example,
 they can find the complete code (and instructions to run it)
 at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContractInitOrTO) 
 folder.
