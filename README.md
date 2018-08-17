@@ -104,7 +104,7 @@ We use the promela tool for
  * *model checking:* we verify the logical correctness of the contract at design time and
  * *generation of execution sequences* we generate excution sequences
     (test cases) with the tool for testing for conformance the
-    the actual implementation.    
+    actual implementation.
 
 
 
