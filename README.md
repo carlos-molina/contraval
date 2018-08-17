@@ -100,10 +100,13 @@ to buyer*, *has buyer fulfilled obligation to pay?*,
 *cancel buyer's obligation to pay*,
 etc. 
 
+We use the promela tool for 
+ * *model checking:* we verify the logical correctness of the contract at design time and
+ * *generation of execution sequences* we generate excution sequences
+    (test cases) with the tool for testing for conformance the
+    the actual implementation.    
 
-An epromela model can be presented to Spin 
-for **model checking** and **generating test 
-cases (execution sequences)**.
+
 
 ### Model checking 
  Spin can verify the logical consistency of the model
@@ -111,7 +114,7 @@ cases (execution sequences)**.
  properties written 
  in LTL (Linear Temporal Logics) formulae. <br />
 
-### Generation of execution sequences (test cases) 
+### Generation of execution sequences (test cases) for conformance testing
  Spin can be instructed to generate all the execution
  sequences encoded in the epromela model of the
  smart contract. The basic idea is to use Spin as a
