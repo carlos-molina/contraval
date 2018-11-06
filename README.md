@@ -330,8 +330,8 @@ for evaluation for contract compliance.
 The directions for installation of epromela are documented in
 the [UserGuide_v1.2.pdf](./UserGuide_v1.2.pdf) file. The document
 also includes examples that demonstrate its operation. The reader
-is expected to have some basic knowledge of [SPIN and Promela] 
-(http://spinroot.com/spin/whatispin.html) and
+is expected to have some basic knowledge of 
+[SPIN and Promela](http://spinroot.com/spin/whatispin.html) and
 a local computer to dowload and deploy them.
 
 # Contributors
