@@ -24,36 +24,25 @@ the the components.
 
 <br/>
 
-Hello World Contract example: As an example, let as have a look
-at a hello world contract example of a smart contract between
-a buyer and a store: 
+HelloWorld example: As an example, let as have a look
+at a helloWorld example of a smart contract between
+a buyer and a store:
 
 ```
-1) The buyer is obliged to pay the store withing the
+1. The buyer is obliged to pay the store withing the
    next 3 days. 
-2) The store is obliged to acknowledge the payment 
+1. The store is obliged to acknowledge the payment 
    withing 24 hrs after receiving it. 
-3) The contract will be considered complete either
- * normally when the store submits the acknowledge.
- * abnormally when one or both parties fail to meet
+1. The contract will be considered complete either
+* normally when the store submits the acknowledge.
+* abnormally when one or both parties fail to meet
   their deadlines.
 ```
-The contract in natural language can be represented
-schematically. Depending on the execution model of the
-operations, diffent models can be built.
-
-As an example, let us assume the execution model shown in the
-following figure.
+An schematic representation of the contract is shown in the
+figure.
 
 <p align="center">
-  <img src="./figures/executionmodelTOtoComplete.png" width="550" title="Execution model that completes in success or timeout">
-</p>
-
-On the basis of the exedcution model shown above, we can
-represent the contract example schematically.
-
-<p align="center">
-  <img src="./figures/helloWorldSmartContractBuyerStoreExecTO.png" width="550" title="Hello world contract: buyer-store">
+  <img src="./figures/helloWorldSmartContractBuyerStore.png" width="550" title="Hello world contract: buyer-store">
 </p>
 
 In the figure, *pay*  represents the execution
@@ -65,24 +54,21 @@ business events that are notified to the
 smart contract (see below), for example, the
 execution of the operation *pay* generates the
 *pay* business event.
-
-A diamon represents an alternative output 
-produced by the execution of the operation
-located at its left. In accordance with 
-the execution model, the outcome is either
-sucess or timeout. For example, *payto* (where
-*to* stands for timeout)
-presentes the failure of the execution of 
-the operation *pay* to complete before the deadline.
-
+A diamon represents an alternative execution 
+split, *O* stands for obligation and *TO* 
+stands for Time Out. In this model (there
+are other alternatives), the
+box at the right side of a diamon represents
+the sucessful execution of the operation,
+while the *TO* represents the expiration of the
+deadline to succssfully execute the operation.
 
 The dashed lines 
 represent abnormal paths to contract completion.
-For instance, the dashed line associated to *payto* 
-means that the buyer failed to observe its
-obligation to pay within 3 days. Consequently,
-the contract ends abnormally.
-
+Thus, the diamon on the right side stipulates that
+the store has an obligation to execute the operation
+*ack* by a time out (TO), which corresponds to the
+24 hrs deadline in this example.
 
 ### What can Epromela do with smart contracts?
 Epromela is a language for writing models that
@@ -100,13 +86,10 @@ to buyer*, *has buyer fulfilled obligation to pay?*,
 *cancel buyer's obligation to pay*,
 etc. 
 
-We use the promela tool for 
- * *model checking:* we verify the logical correctness of the contract at design time and
- * *generation of execution sequences* we generate excution sequences
-    (test cases) with the tool for testing for conformance the
-    actual implementation.
 
-
+An epromela model can be presented to Spin 
+for **model checking** and **generating test 
+cases (execution sequences)**.
 
 ### Model checking 
  Spin can verify the logical consistency of the model
@@ -114,7 +97,7 @@ We use the promela tool for
  properties written 
  in LTL (Linear Temporal Logics) formulae. <br />
 
-### Generation of execution sequences (test cases) for conformance testing
+### Generation of execution sequences (test cases) 
  Spin can be instructed to generate all the execution
  sequences encoded in the epromela model of the
  smart contract. The basic idea is to use Spin as a
@@ -174,14 +157,13 @@ the event *pay* and the buyer has a pending obligation
 to pay.
 
 <p align="center">
-  <img src="./figures/epromelaModelOfBuyerStoreContractOutputTO.png" 
-   width="400" title="epromela model of the buyer-store example with
-                      output TO.">
+  <img src="./figures/epromelaModelOfBuyerStoreContract.png" 
+   width="400" title="epromela model of the buyer-store example.">
 </p>
 
-If you are motivated to run the hello world contract world example,
+If you are motivated to run the hello world example,
 you can find the complete code (and instructions to run it)
-at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContractExecOutSuccessOrTO) folder.
+at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContract) folder.
 A run of the model will mechanically produce all (three) the execution
 sequences encoded in the model, namely:
 
@@ -191,86 +173,14 @@ sequences encoded in the model, namely:
 - pay -> ackto
 ```
 Where *payto* and *ackto* stand for expiration of time out to pay 
-and expiration of time out to ack, respectively. You will notice
-that the rules (included in the *rules.h* file) are slightly
-different in comparison with the rules of the previous
-model.
-
-
-### Alternative epromela model of the contract example
-The execution model of operations shown above is not unique. Another
-altrnative is shoen in the figure.
-
-As an example, let us assume the execution model shown in the
-following figure.
-
-<p align="center">
-  <img src="./figures/executionmodelTOtoInitiate.png" width="550" title="Execution model that initiates or times out">
-</p>
-
-On the basis of this execution model, we can
-represent the contract example schematically
-in the following manner.
-
-<p align="center">
-  <img src="./figures/helloWorldSmartContractBuyerStoreInitiateTO.png" width="550" title="Hello world contract: buyer-store with init TO">
-</p>
-
-In the figure, *pay*  represents the execution
-of the *pay*  operation initiated by the buyer.
-Similarly, *ack* represens the execution of the
-*ack* operation initiated by the store.
-These executions, result in the generation of
-business events that are notified to the
-smart contract (see below), for example, the
-execution of the operation *pay* generates the
-*pay* business event.
-A diamon represents an alternative execution 
-split, *O* stands for obligation and *TO* 
-stands for Time Out. In this model (there
-are other alternatives), the
-box at the right side of a diamon represents
-the sucessful execution of the operation,
-while the *TO* represents the expiration of the
-deadline to succssfully execute the operation.
-
-The dashed lines represent abnormal paths to contract 
-completion. They results from failures to meet
-deadlines.
-
-
-The epromela model includes four rules and is shown in
-the figure. Observe that the model includes two separate
-rules (for for the normal outcome and another for
-the timed out outcome) for handling each business 
-operation. For instance, there is a rule for handling
-*pay* and another one independent rule for handling
-*payto*.
-
-<p align="center">
-  <img src="./figures/epromelaModelOfBuyerStoreContractInitTO.png" 
-   width="400" title="epromela model of the buyer-store example with
-                      init  TO.">
-</p>
-
-
-
-Motivated readers are welcome to run this alternative
-model of the  hello world contract example,
-they can find the complete code (and instructions to run it)
-at the [example/helloWorldSmartContract](https://github.com/carlos-molina/contraval/tree/master/examples/helloWorldSmartContractInitOrTO) 
-folder.
-As in the model discussed earlier, a run of this
-model will mechanically produce all (three) the execution
-sequences encoded in the model, namely:
-
-```
-- payto
-- pay -> ack
-- pay -> ackto
-```
-Where *payto* and *ackto* stand for expiration of time out to pay 
 and expiration of time out to ack, respectively.
+
+ 
+Section D of
+[Implementation of Smart Contracts Using Hybrid Architectures with On- and Off-Blockchain Components](https://arxiv.org/pdf/1808.00093.pdf "implementation paper")) explains where to find the sequences
+generated.
+
+
 
 
 
@@ -329,10 +239,7 @@ for evaluation for contract compliance.
 
 The directions for installation of epromela are documented in
 the [UserGuide_v1.2.pdf](./UserGuide_v1.2.pdf) file. The document
-also includes examples that demonstrate its operation. The reader
-is expected to have some basic knowledge of [SPIN and Promela] 
-(http://spinroot.com/spin/whatispin.html) and
-a local computer to dowload and deploy them.
+also includes examples that demonstrate its operation.
 
 # Contributors
 
