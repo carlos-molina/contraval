@@ -334,6 +334,19 @@ is expected to have some basic knowledge of
 [SPIN and Promela](http://spinroot.com/spin/whatispin.html) and
 a local computer to dowload and deploy them.
 
+# Implementation, deployment and execution of smart contracts 
+
+Once the designer is satisfied about the correctness
+of the epromela model of the smart contract,
+he can proceed to implement it in a language
+for coding smart contracts, deploy and execute it.
+
+We have implemented a Contract Compliant Checker---a tool for 
+assisting designers in this task. The open source code and
+documentation can be retrieved from the 
+[TECOmate repository](https://github.com/carlos-molina/TECOmate).
+
+
 # Contributors
 
 *  Abubkr A. Abdelsadiq developed the macros as part of his
