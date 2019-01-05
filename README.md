@@ -7,7 +7,17 @@ be validated by the Spin model checker.
 <br/>
 
 ### Is your smart contract reliable?
- abc 
+Reliability is an attribute of a system, of the
+smart contract in this discussion, and defines
+its continuity of correct service. Thus my smart
+contract is reliable if it is capable of 
+delivering a correct service continuously during
+the contracting interaction, that it, if it is
+capable of monitoring or enforcing the 
+the contractual interaction continuously
+and correctly. This means that a realiable smart
+contract does not crash or produce incorrect
+verdicts.
 
 ### Validate your smart contracts before deployment
 A particularity of smart contracts deployed on--blockchain 
