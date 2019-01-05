@@ -63,18 +63,27 @@ are remarkably hard to build. Complexity is due to
 fact that they are distributed systems executed
 by two or more parties interacting is a loosely
 coupled manner over the conventional Internet. Consequently,
-their execution is impacted by both human and 
-infrastructure (software, network and hardware)
-behaviour. For example, regarding human behaviour,
-the person responsible for authorizing a payment
-might accidentaly or deliberately delay it and
-make the smart contract fail. Regarding
-infrastructure behaviour, several potential
-problems might derail the smart contract,
-including unpredictable message delays, clock skews, 
-wrongly formatted messages, inclusion of
-delivery addresses that cannot be found, bank accounts 
-with insufficient funds and so  on.
+at runtime, smart contracts are likely to be impacted
+by human, infrastructure (software, hardware and
+network) and business application behaviour behaviours:
+
+- Human behaviour: for example, the person responsible 
+   for authorizing a payment might accidentaly or deliberately 
+   delay it and make the smart contract fail. 
+
+- Infrastructure behaviour: several potential problems might 
+   derail the smart contract,
+   including unpredictable message delays, clock skews
+   and network breakdown.
+
+- Business application behaviour:
+    a smart contract can be impacted by issues related to
+   the application. For example, a message is
+   incorrectly formatted, the delivery addresses
+   cannot be found, the item was delivered to the
+   wrong address, the buyer's bank account does not have
+   sufficient funds, and so on.
+   
 
 A well designed contracts that meant to reliable
 need to account for these potentail situations. 
