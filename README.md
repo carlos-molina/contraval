@@ -160,7 +160,7 @@ is shown in the figure.
 
 <p align="center">
   <img src="./figures/developmentOfReliableSmartContracts.png" 
-   width="400" title="Development of reliable smart contracts.">
+   width="800" title="Development of reliable smart contracts.">
 </p>
 
 As shown in the figure,  we rely on exception handling
