@@ -12,10 +12,42 @@ smart contract in this discussion, and defines
 its continuity of correct service. Thus my smart
 contract is reliable if it is capable of 
 monitoring or enforcing the 
-the contractual interaction continuously
+contractual interaction continuously
 and correctly. This means that a realiable smart
 contract does not crash or produce incorrect
 verdicts.
+
+### What can go wrong with a smart contract?
+Smart contracts are complex systems and as such
+are likely to contain design and implementation
+faults that will eventually 
+manifiest as run--time errors. These errors will 
+derail the smart contracts from its normal expected 
+behaviour or crash it.
+
+</br>
+####Errors and faults:#### To follow precise terminology 
+(see for example,
+[Basic Concepts and Taxonomy of Dependable
+and Secure Computing, Algirdas et. al.](http://www.cs.ncl.ac.uk/research/pubs/articles/papers/666.pdf"Brian Randell paper at Ncl"))
+I should distinguish
+between faults and errors; however, since the 
+use of the two terms as synonymous is widely spread,
+I will not insist in the distintion, except where
+strictly necessary. Intuitively speaking, a fault
+is a dormant a bug  that has not been hit by the 
+execution; for example, an erroneous line of a Java 
+code that has not been executed.
+</br>
+
+####Where are the errors comming from?####  
+Smart contracts are impacted by desing and
+implementation errors.
+
+- Design time errors:  
+
+- Implementation errros:
+
 
 ### Validate your smart contracts before deployment
 A particularity of smart contracts deployed on--blockchain 
