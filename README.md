@@ -87,10 +87,13 @@ that is activated when **plan A** does not work.
 
 </br>
 
-The problem with accounting for exeptional
-situations is that the smart contract becomes
-includes intricate executions that are
-hard to examine and reason about its
+Accounting for exceptional situation is a
+necessary step towards building realiable
+contracts, however, it is not enough. The 
+problem with bringing exceptions into the
+design of smat contracts is that they 
+become populated by intricate executions that are
+hard to examine and reason about for
 correctness. The designer can address the
 problem only with the assitance of mechanical 
 tools that help in systematic validation 
