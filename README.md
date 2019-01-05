@@ -7,8 +7,7 @@ be validated by the Spin model checker.
 <br/>
 
 ### Is your smart contract reliable?
- ...
-
+ abc 
 
 ### Validate your smart contracts before deployment
 A particularity of smart contracts deployed on--blockchain 
