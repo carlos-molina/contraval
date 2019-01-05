@@ -46,9 +46,90 @@ code that has not been executed.
 Smart contracts are impacted by desing and
 implementation errors.
 
-- Design time errors: They are accidently introduced at 
+- Design time errors: They are accidently introduced 
+  during the development phase by the humans responsible 
+  for designing the smart contract.
 
-- Implementation errors:
+- Implementation errors: They are introduced by the
+  humans responsible for coding the smart contract,
+  for example, in Solidity language.
+
+Both types of errors are hard to avoid unless
+a rigorous approach to validate the smart contract
+is taken. 
+
+</br>
+Ideal smart contracts, that is, smart contracts that
+always follow normal execution paths are realively
+simple to build. However, realistic smart contracts
+are remarkably hard to build. Complexity is due to
+fact that they are distributed systems executed
+by two or more parties interacting is a loosely
+coupled manner over the conventional Internet. Consequently,
+their execution is impacted by both human and 
+infrastructure (software, network and hardware)
+behaviour. For example, regarding human behaviour,
+the person responsible for authorizing a payment
+might accidentaly or deliberately delay it and
+make the smart contract fail. Regarding
+infrastructure behaviour, several potential
+problems might derail the smart contract,
+including unpredictable message delays, clock skews, 
+wrongly formatted messages, inclusion of
+delivery addresses that cannot be found, bank accounts 
+with insufficient funds and so  on.
+
+A well designed contracts that meant to reliable
+need to account for these potentail situations. 
+As a result the smart contract code that deals
+with the normal (ideal) execution of the
+smart contract needs to be complemented with
+code for dealing with abnormal (exceptional)
+executions; that is, **plan B** code (contingency code)
+that is activated when **plan A** does not work.
+
+</br>
+
+The problem with accounting for exeptional
+situations is that the smart contract becomes
+includes intricate executions that are
+hard to examine and reason about its
+correctness. The designer can address the
+problem only with the assitance of mechanical 
+tools that help in systematic validation 
+of the smart contract. 
+
+
+
+### Validation of smart contract models to remove faults
+To appreciate validation,
+it is worth bearing in mind that a smart contract
+is a model of the original legal contract
+signed between the contracting parties. Such
+model is expressed at different levels of
+abstractions ranging from high level normative
+statements to execution code, such as Ethereum EVM
+bytecode. Each model is liable to errors that
+correspond to its level of abstraction. For
+example, example, a design time model is liable
+to errors included in the contractual clauses:
+conflicting clauses, duplicated clauses, missing
+clauses and so on. See for example,
+[Model Checking Correctness Properties of a Middleware Service for Contract Compliance, Carlos Molina-Jimenez, et.al.](http://delivery.acm.org/10.1145/1660000/1657758/p13-molina-jimenez.pdf "model checking paper").
+
+
+Likewise, an implementation
+model (for example, in Solidity) is liable to
+errors related to the Solidity language,
+sucha as reentrancy, unchecked send, integer
+overflow, and so on. See for example,
+[ZEUS: Analyzing Safety of Smart Contracts, Sukrit at. al.](http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_09-1_Kalra_paper.pdf "ZEUS paper").
+
+
+
+
+ 
+
 
 
 ### Validate your smart contracts before deployment
