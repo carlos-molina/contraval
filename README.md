@@ -32,6 +32,8 @@ To follow precise terminology (see for example,
 [Basic Concepts and Taxonomy of Dependable
 and Secure Computing, Algirdas et. al.](http://www.cs.ncl.ac.uk/research/pubs/articles/papers/666.pdf "Brian Randell paper at Ncl"))
 
+
+
 I should distinguish
 between faults and errors; however, since the 
 use of the two terms as synonymous is widely spread,
