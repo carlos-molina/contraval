@@ -101,7 +101,7 @@ of the smart contract.
 
 
 
-### Validation of smart contract models to remove faults
+### Smart contract models 
 To appreciate validation,
 it is worth bearing in mind that a smart contract
 is a model of the original legal contract
@@ -126,9 +126,37 @@ overflow, and so on. See for example,
 [ZEUS: Analyzing Safety of Smart Contracts, Sukrit at. al.](http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_09-1_Kalra_paper.pdf "ZEUS paper").
 
 
+Errors (precisely faults) are likely to be included
+during the building of the  models themselves and 
+during the conversion from one model into the
+next model below. This is due to the semantic
+gap between models represented at different levels
+of abstractions; mapping from one statement at
+a given model to the next model below is not one--to--one,
+but many--to--many. See for example,
+[Establishing Conformance Between Contracts and Choreographies, Carlos Molina-Jimenez, at. al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6642860 "Vienna paper"). One can ask, how did the
+programmer map a given statement into implementation
+code, out of several correct alternatives?
 
+To build realiable smart contract we are in
+favour of the following approach:
 
- 
+1. Include exception handling in the desigh of your smart contracts.
+2. Build an abstract model of your smart contract and model
+   check it with your favourite model checker, with one
+   that has been specifically designed (or tuned to) for model checking
+   smart contracts--if you have one.
+3. Build the executable model of your smart contract and
+   test it. If possible test (exercise) the actual 
+   implementation deployed in the actual infrastructure. 
+   Do not forget to verify that the executable smart
+   contract conforms to the highest model of the
+   smart contract--likely to be in plain business
+   language.
+
+### Validation of smart contract models to remove faults
+
+the approach shown in the figure.
 
 
 
