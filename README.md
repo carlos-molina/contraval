@@ -1,10 +1,11 @@
-
-# contraval (smart contract validation)
-
 This repository hosts **epromela** ---a tool for
 building models of smart contracts that can
 be validated by the Spin model checker.
 <br/>
+
+
+# How to build reliable smart contracts
+
 
 ### Is your smart contract reliable?
 Reliability is an attribute of a system, of the
@@ -165,11 +166,11 @@ favour of the following approach:
    test it. Test (exercise) the actual 
    implementation deployed in the actual infrastructure. If
    possible, exercise all the executions sequences encoded
-   in the smart contrac--this is perfectly possible for 
+   in the smart contract--this is perfectly possible for 
    small contracts.
    Do not forget to verify that the executable smart
    contract conforms to the highest model of the
-   smart contract--likely to be in plain business
+   smart contract--likely to be in plain English business
    language. 
 
 ### Validation of smart contract models to remove faults
@@ -188,8 +189,10 @@ check and test systematically to uncover and
 remove faults. Central to the figure is the contraval
 tools that we use in both, the model checking and
 testing stages. Details of the contraval tool are
-explainex next.
+explained next.
 
+
+# contraval (smart contract validation)
 
 ### Validate your smart contracts before deployment
 A particularity of smart contracts deployed on--blockchain 
