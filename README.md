@@ -4,7 +4,7 @@ be validated by the Spin model checker.
 <br/>
 
 
-# How to build reliable smart contracts
+# 1.- How to build reliable smart contracts
 
 
 ### Is your smart contract reliable?
@@ -200,7 +200,7 @@ testing stages. Details of the contraval tool are
 explained next.
 
 
-# contraval (smart contract validation)
+# 2. contraval (smart contract validation)
 
 ### Validate your smart contracts before deployment
 A particularity of smart contracts deployed on--blockchain 
