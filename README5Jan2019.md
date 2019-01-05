@@ -6,10 +6,6 @@ building models of smart contracts that can
 be validated by the Spin model checker.
 <br/>
 
-### Is your smart contract reliable?
- ...
-
-
 ### Validate your smart contracts before deployment
 A particularity of smart contracts deployed on--blockchain 
 is that because of their descentralisation and openess, 
