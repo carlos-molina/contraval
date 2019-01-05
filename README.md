@@ -141,18 +141,30 @@ code, out of several correct alternatives?
 To build realiable smart contract we are in
 favour of the following approach:
 
-1. Include exception handling in the desigh of your smart contracts.
-2. Build an abstract model of your smart contract and model
+1. Include exception handling in the design of the smart contract
+   under development. 
+2. Build an abstract model of the smart contract and model
    check it with your favourite model checker, with one
    that has been specifically designed (or tuned to) for model checking
    smart contracts--if you have one.
+   This is the stage where you need to verify that you
+   did not forget execution paths and that you include
+   logic to react to both normal and abnormal (exceptional)
+   situations. For example, check that if a cancellation
+   takes place, the smart contract will not complete before
+   the buyer is refunded. Check that the smart contract
+   does not allow the seller to double charge the buyer
+   or that the latter does not get items for free.
 3. Build the executable model of your smart contract and
-   test it. If possible test (exercise) the actual 
-   implementation deployed in the actual infrastructure. 
+   test it. Test (exercise) the actual 
+   implementation deployed in the actual infrastructure. If
+   possible, exercise all the executions sequences encoded
+   in the smart contrac--this is perfectly possible for 
+   small contracts.
    Do not forget to verify that the executable smart
    contract conforms to the highest model of the
    smart contract--likely to be in plain business
-   language.
+   language. 
 
 ### Validation of smart contract models to remove faults
 The approach that we are following in our research 
