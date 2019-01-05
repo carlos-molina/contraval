@@ -26,10 +26,11 @@ derail the smart contracts from its normal expected
 behaviour or crash it.
 
 </br>
+
 #### Errors and faults: To follow precise terminology 
 (see for example,
 [Basic Concepts and Taxonomy of Dependable
-and Secure Computing, Algirdas et. al.](http://www.cs.ncl.ac.uk/research/pubs/articles/papers/666.pdf"Brian Randell paper at Ncl")
+and Secure Computing, Algirdas et. al.](http://www.cs.ncl.ac.uk/research/pubs/articles/papers/666.pdf "Brian Randell paper at Ncl")
 
 I should distinguish
 between faults and errors; however, since the 
@@ -45,9 +46,9 @@ code that has not been executed.
 Smart contracts are impacted by desing and
 implementation errors.
 
-- Design time errors:  
+- Design time errors: They are accidently introduced at 
 
-- Implementation errros:
+- Implementation errors:
 
 
 ### Validate your smart contracts before deployment
