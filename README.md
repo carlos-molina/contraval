@@ -155,9 +155,22 @@ favour of the following approach:
    language.
 
 ### Validation of smart contract models to remove faults
+The approach that we are following in our research 
+is shown in the figure.
 
-the approach shown in the figure.
+<p align="center">
+  <img src="./figures/developmentOfReliableSmartContracts.png" 
+   width="400" title="Development of reliable smart contracts.">
+</p>
 
+As shown in the figure,  we rely on exception handling
+with formal validation of smart contracts. We start
+with and abtract model that we model
+check and test systematically to uncover and
+remove faults. Central to the figure is the contraval
+tools that we use in both, the model checking and
+testing stages. Details of the contraval tool are
+explainex next.
 
 
 ### Validate your smart contracts before deployment
