@@ -110,19 +110,25 @@ model is expressed at different levels of
 abstractions ranging from high level normative
 statements to execution code, such as Ethereum EVM
 bytecode. Each model is liable to errors that
-correspond to its level of abstraction. For
-example, example, a design time model is liable
+correspond to its level of abstraction. 
+
+**Design time models:** a design time model is liable
 to errors included in the contractual clauses:
 conflicting clauses, duplicated clauses, missing
 clauses and so on. See for example,
 [Model Checking Correctness Properties of a Middleware Service for Contract Compliance, Carlos Molina-Jimenez, et.al.](http://delivery.acm.org/10.1145/1660000/1657758/p13-molina-jimenez.pdf "model checking paper").
 
 
-Likewise, an implementation
-model (for example, in Solidity) is liable to
-errors related to the Solidity language,
-sucha as reentrancy, unchecked send, integer
-overflow, and so on. See for example,
+**Implementation time models:** an implementation
+time model is liable to errors related to the implementation 
+language and to the mapping that programmer implements
+to convert the abstract model of the smart contract into
+executable code. The programmer needs skill to interprete the
+abstract model of the smart contract correctly and to
+map accurately.  For example, smart contracts implemented 
+in Solidity language are known to be at risk of being
+afflicted by reentrancy, unchecked send, integer
+overflow, and other language related errors. See for example,
 [ZEUS: Analyzing Safety of Smart Contracts, Sukrit at. al.](http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_09-1_Kalra_paper.pdf "ZEUS paper").
 
 
