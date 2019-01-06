@@ -8,12 +8,12 @@ be validated by the Spin model checker.
 
 
 ### Is your smart contract reliable?
-Reliability is an attribute of a system, of the
+Reliability is an attribute of a system, of a 
 smart contract in this discussion, and defines
 its continuity of correct service. Thus my smart
 contract is reliable if it is capable of 
-monitoring or enforcing the 
-contractual interaction continuously
+monitoring or enforcing  
+contractual interactions continuously
 and correctly. This means that a realiable smart
 contract does not crash or produce incorrect
 verdicts.
@@ -29,25 +29,26 @@ behaviour or crash it.
 **Errors and faults:** To follow precise terminology (see for example,
 [Basic Concepts and Taxonomy of Dependable
 and Secure Computing, Algirdas et. al.](http://www.cs.ncl.ac.uk/research/pubs/articles/papers/666.pdf "Brian Randell paper at Ncl"))
-I should distinguish
-between faults and errors; however, since the 
+I should distinguish between faults and errors; however, since the 
 use of the two terms as synonymous is widely spread,
 I will not insist in the distintion, except where
 strictly necessary. Intuitively speaking, a fault
-is a dormant a bug  that has not been hit by the 
-execution; for example, an erroneous line of a Java 
-code that has not been executed.
+is a dormant error, that is, an  error, for example,
+an erroneous line of the Java code that has not
+been activated in the execution because some 
+if-conditions have not been satisfied yet.
 </br>
 
-#### Where are the errors comming from?  
-Smart contracts are impacted by desing and
-implementation errors.
+#### Where do errors come from?  
+Smart contracts are impacted by several errors that
+can be clasified into design and implementation 
+errors.
 
-- Design time errors: They are accidently introduced 
+- **Design time errors:** They are accidently introduced 
   during the development phase by the humans responsible 
   for designing the smart contract.
 
-- Implementation errors: They are introduced by the
+- **Implementation errors:** They are introduced by the
   humans responsible for coding the smart contract,
   for example, in Solidity language.
 
@@ -57,42 +58,42 @@ is taken.
 
 </br>
 Ideal smart contracts, that is, smart contracts that
-always follow normal execution paths are realively
-simple to build. However, realistic smart contracts
-are remarkably hard to build. Complexity is due to
+always follow normal execution paths are relatively
+simple to build and examine. However, realistic smart contracts
+are remarkably intricate. Complexity is due to
 fact that they are distributed systems executed
 by two or more parties interacting is a loosely
 coupled manner over the conventional Internet. Consequently,
 at runtime, smart contracts are likely to be impacted
 by human, infrastructure (software, hardware and
-network) and business application behaviour behaviours:
+network) and application behaviours:
 
 - Human behaviour: for example, the person responsible 
    for authorizing a payment might accidentaly or deliberately 
    delay it and make the smart contract fail. 
 
-- Infrastructure behaviour: several potential problems might 
-   derail the smart contract,
-   including unpredictable message delays, clock skews
-   and network breakdown.
-
-- Business application behaviour:
-    a smart contract can be impacted by issues related to
-   the application. For example, a message is
-   incorrectly formatted, the delivery addresses
-   cannot be found, the item was delivered to the
-   wrong address, the buyer's bank account does not have
+- Infrastructure behaviour: for example t 
+   unpredictable message delays, clock skews
+   and network breakdowns might delay a payment message
+   beyond its deadline. 
+- Application behaviour: for example, a message 
+   the application might send a message incorrectly formatted, 
+   include a delivery addresses
+   that cannot be found, take a delivery as
+   complete when the corresponding item has been delivered to the
+   wrong address, try charge a bank account that does not have
    sufficient funds, and so on.
    
 
 A well designed contracts that meant to reliable
 need to account for these potentail situations. 
-As a result the smart contract code that deals
+Thus the smart contract code that deals
 with the normal (ideal) execution of the
 smart contract needs to be complemented with
 code for dealing with abnormal (exceptional)
-executions; that is, **plan B** code (contingency code)
-that is activated when **plan A** does not work.
+executions. That is, the smart contract need
+to be able to follow **plan B** (contingency)
+when **plan A** does not work.
 
 </br>
 
@@ -100,7 +101,7 @@ Accounting for exceptional situation is a
 necessary step towards building realiable
 contracts, however, it is not enough. The 
 problem with bringing exceptions into the
-design of smat contracts is that they 
+design of smart contracts is that they 
 become populated by intricate executions that are
 hard to examine and reason about for
 correctness. The designer can address the
@@ -115,10 +116,11 @@ To appreciate validation,
 it is worth bearing in mind that a smart contract
 is a model of the original legal contract
 signed between the contracting parties. Such
-model is expressed at different levels of
+a model is expressed at different levels of
 abstractions ranging from high level normative
 statements to execution code, such as Ethereum EVM
-bytecode. Each model is liable to errors that
+bytecode. Each model (strictly speaking, each
+version of the model) is liable to errors that
 correspond to its level of abstraction. 
 
 **Design time models:** a design time model is liable
@@ -130,11 +132,11 @@ clauses and so on. See for example,
 
 **Implementation time models:** an implementation
 time model is liable to errors related to the implementation 
-language and to the mapping that programmer implements
+language and to the mapping that the programmer implements
 to convert the abstract model of the smart contract into
 executable code. The programmer needs skill to interprete the
 abstract model of the smart contract correctly and to
-map accurately.  For example, smart contracts implemented 
+map it accurately.  For example, smart contracts implemented 
 in Solidity language are known to be at risk of being
 afflicted by reentrancy, unchecked send, integer
 overflow, and other language related errors. See for example,
@@ -147,14 +149,17 @@ during the conversion from one model into the
 next model below. This is due to the semantic
 gap between models represented at different levels
 of abstractions; mapping from one statement at
-a given model to the next model below is not one--to--one,
-but many--to--many. See for example,
-[Establishing Conformance Between Contracts and Choreographies, Carlos Molina-Jimenez, at. al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6642860 "Vienna paper"). One can ask, how did the
+a given model to the next model below is not one-to-one,
+but many-to-many. See for example,
+[Establishing Conformance Between Contracts and Choreographies, Carlos Molina-Jimenez, at. al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6642860 "Vienna paper"). Even if the mapping is correct, sometimes
+it becomes relevant to learn, how did the
 programmer map a given statement into implementation
 code, out of several correct alternatives?
 
-To build realiable smart contract we are in
-favour of the following approach:
+
+If you are a developer interested in building
+a realiable smart contract, we suggest the
+following approach:
 
 1. Include exception handling in the design of the smart contract
    under development. 
@@ -162,8 +167,8 @@ favour of the following approach:
    check it with your favourite model checker, with one
    that has been specifically designed (or tuned to) for model checking
    smart contracts--if you have one.
-   This is the stage where you need to verify that you
-   did not forget execution paths and that you include
+   This is the stage where you need to verify that you 
+   have not forgotten execution paths and that you have included
    logic to react to both normal and abnormal (exceptional)
    situations. For example, check that if a cancellation
    takes place, the smart contract will not complete before
@@ -171,7 +176,10 @@ favour of the following approach:
    does not allow the seller to double charge the buyer
    or that the latter does not get items for free.
 3. Build the executable model of your smart contract and
-   test it. Test (exercise) the actual 
+   test it. There are other techniques that can be used
+   for verification of executable code (for example,
+   symbolic execution) but we are following 
+   testing here. Test (exercise) the actual 
    implementation deployed in the actual infrastructure. If
    possible, exercise all the executions sequences encoded
    in the smart contract--this is perfectly possible for 
@@ -194,9 +202,14 @@ As shown in the figure,  we rely on exception handling
 with formal validation of smart contracts. We start
 with and abtract model that we model
 check and test systematically to uncover and
-remove faults. Central to the figure is the contraval
-tools that we use in both, the model checking and
-testing stages. Details of the contraval tool are
+remove faults.  We stress that the programmer is
+likely to produce an unreliable executable smart
+contract out of a realiable abstract model. We
+introduce testing to uncover and remove potential
+faults.  
+Central to the figure is the contraval
+tools that we use at both, the model checking and
+testing stages.  Details of the contraval tool are 
 explained next.
 
 
