@@ -33,7 +33,7 @@ I should distinguish between faults and errors; however, since the
 use of the two terms as synonymous is widely spread,
 I will not insist in the distintion, except where
 strictly necessary. Intuitively speaking, a fault
-is a dormant error, that is, an  error, for example,
+is a dormant error, for example,
 an erroneous line of the Java code that has not
 been activated in the execution because some 
 if-conditions have not been satisfied yet.
@@ -72,11 +72,11 @@ network) and application behaviours:
    for authorizing a payment might accidentaly or deliberately 
    delay it and make the smart contract fail. 
 
-- Infrastructure behaviour: for example t 
+- Infrastructure behaviour: for example 
    unpredictable message delays, clock skews
    and network breakdowns might delay a payment message
    beyond its deadline. 
-- Application behaviour: for example, a message 
+- Application behaviour: for example,  
    the application might send a message incorrectly formatted, 
    include a delivery addresses
    that cannot be found, take a delivery as
@@ -85,12 +85,11 @@ network) and application behaviours:
    sufficient funds, and so on.
    
 
-A well designed contracts that meant to reliable
-need to account for these potentail situations. 
+A smart contract that is meant to be reliable
+needs to account for these potentail situations. 
 Thus the smart contract code that deals
-with the normal (ideal) execution of the
-smart contract needs to be complemented with
-code for dealing with abnormal (exceptional)
+with the normal (ideal) execution needs to be complemented with
+code that deals with abnormal (exceptional)
 executions. That is, the smart contract need
 to be able to follow **plan B** (contingency)
 when **plan A** does not work.
@@ -158,11 +157,12 @@ code, out of several correct alternatives?
 
 
 If you are a developer interested in building
-a realiable smart contract, we suggest the
+a realiable smart contracts, we suggest the
 following approach:
 
 1. Include exception handling in the design of the smart contract
-   under development. 
+   under development. Exception handling should be central to 
+   your design rather than an afterthought component.  
 2. Build an abstract model of the smart contract and model
    check it with your favourite model checker, with one
    that has been specifically designed (or tuned to) for model checking
@@ -207,6 +207,8 @@ likely to produce an unreliable executable smart
 contract out of a realiable abstract model. We
 introduce testing to uncover and remove potential
 faults.  
+
+
 Central to the figure is the contraval
 tools that we use at both, the model checking and
 testing stages.  Details of the contraval tool are 
