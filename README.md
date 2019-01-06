@@ -41,7 +41,7 @@ if-conditions have not been satisfied yet.
 
 #### Where do errors come from?  
 Smart contracts are impacted by several errors that
-can be clasified into design and implementation 
+we clasified into design, implementation and mapping 
 errors.
 
 - **Design time errors:** They are accidently introduced 
@@ -52,7 +52,11 @@ errors.
   humans responsible for coding the smart contract,
   for example, in Solidity language.
 
-Both types of errors are hard to avoid unless
+- **Mapping errors:** They are introduced by the
+  humans responsible for mapping design into
+  implementation.
+
+These types of errors are hard to avoid unless
 a rigorous approach to validate the smart contract
 is taken. 
 
@@ -76,6 +80,7 @@ network) and application behaviours:
    unpredictable message delays, clock skews
    and network breakdowns might delay a payment message
    beyond its deadline. 
+
 - Application behaviour: for example,  
    the application might send a message incorrectly formatted, 
    include a delivery addresses
@@ -142,23 +147,22 @@ overflow, and other language related errors. See for example,
 [ZEUS: Analyzing Safety of Smart Contracts, Sukrit at. al.](http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_09-1_Kalra_paper.pdf "ZEUS paper").
 
 
-Errors (precisely faults) are likely to be included
-during the building of the  models themselves and 
-during the conversion from one model into the
-next model below. This is due to the semantic
-gap between models represented at different levels
-of abstractions; mapping from one statement at
-a given model to the next model below is not one-to-one,
-but many-to-many. See for example,
-[Establishing Conformance Between Contracts and Choreographies, Carlos Molina-Jimenez, at. al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6642860 "Vienna paper"). Even if the mapping is correct, sometimes
-it becomes relevant to learn, how did the
-programmer map a given statement into implementation
-code, out of several correct alternatives?
+**Mapping from model into model*** Errors (precisely faults) 
+  are likely to be included during the building of the  models 
+  themselves and during the conversion (mapping) from one model into the
+  next model below. This is due to the semantic
+  gap between models represented at different levels
+  of abstractions; mapping from one statement at
+  a given model to the next model below is not one-to-one,
+  but many-to-many. See for example,
+  [Establishing Conformance Between Contracts and Choreographies, Carlos Molina-Jimenez, at. al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6642860 "Vienna paper"). Even if the mapping is correct, 
+  sometimes it becomes relevant to learn, how did the
+  programmer map a given statement into implementation
+  code, out of several correct alternatives?
 
 
 If you are a developer interested in building
-a realiable smart contracts, we suggest the
-following approach:
+realiable smart contracts, we suggest the following approach:
 
 1. Include exception handling in the design of the smart contract
    under development. Exception handling should be central to 
@@ -189,6 +193,17 @@ following approach:
    smart contract--likely to be in plain English business
    language. 
 
+It is worth clarifying that these are standard software
+engineering techniques for building reliable systems.
+However, perhaps due to the novelty of blockchain-based
+applications, they have been largely ignored by developers
+of smart contracts. This comes as a surprise as a salient
+particularity of smart contracts (in particular those
+deployed on--blockchains) is that once deployed, they
+are very hard to amend. 
+
+
+
 ### Validation of smart contract models to remove faults
 The approach that we are following in our research 
 is shown in the figure.
@@ -199,9 +214,16 @@ is shown in the figure.
 </p>
 
 As shown in the figure,  we rely on exception handling
-with formal validation of smart contracts. We start
-with and abtract model that we model
-check and test systematically to uncover and
+with formal validation of smart contracts. Notice that
+the box of the *exceptional smart contract behaviour* is
+larger than the *normal smart contract behaviour*. We
+have drawn them like that to underline the fact that
+exception handling code represents a large porcentage
+of the whole code-some authors claim that it can be
+as large as up to two-thirds.
+
+Once the abstract model of the smart contract is
+built, we model check and test it systematically to uncover and
 remove faults.  We stress that the programmer is
 likely to produce an unreliable executable smart
 contract out of a realiable abstract model. We
