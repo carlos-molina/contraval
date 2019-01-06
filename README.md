@@ -206,9 +206,9 @@ remove faults.  We stress that the programmer is
 likely to produce an unreliable executable smart
 contract out of a realiable abstract model. We
 introduce testing to uncover and remove potential
-faults. Though not shown in the figure, the *uncovered faults*
+faults. Though not shown in the figure, the *faults uncovered*
 arrows are meant to trigger correction 
-and re--examination of the corresponding models. 
+and re-examination of the corresponding models. 
 
 
 Central to the figure is the contraval
