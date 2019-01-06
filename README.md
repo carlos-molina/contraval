@@ -216,7 +216,7 @@ is shown in the figure.
 As shown in the figure,  we rely on exception handling
 with formal validation of smart contracts. Notice that
 the box of the *exceptional smart contract behaviour* is
-larger than the *normal smart contract behaviour*. We
+larger than the box of *normal smart contract behaviour*. We
 have drawn them like that to underline the fact that
 exception handling code represents a large porcentage
 of the whole code-some authors claim that it can be
