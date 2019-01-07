@@ -91,7 +91,7 @@ network) and application behaviours:
    
 
 A smart contract that is meant to be reliable
-needs to account for and include mechanisms for
+needs to include mechanisms for
 tolerating these abnormal (and undesirable) situations 
 that will sooner or later materialize. 
 Thus the smart contract code that deals
