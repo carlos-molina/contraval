@@ -91,7 +91,9 @@ network) and application behaviours:
    
 
 A smart contract that is meant to be reliable
-needs to account for these potentail situations. 
+needs to account for and include mechanisms for
+tolerating these abnormal (and undesirable) situations 
+that will sooner or later materialize. 
 Thus the smart contract code that deals
 with the normal (ideal) execution needs to be complemented with
 code that deals with abnormal (exceptional)
@@ -194,7 +196,8 @@ realiable smart contracts, we suggest the following approach:
    language. 
 
 It is worth clarifying that these are standard software
-engineering techniques for building reliable systems.
+engineering techniques for building reliable systems
+and are referred to as fault-tolerance techniques.
 However, perhaps due to the novelty of blockchain-based
 applications, they have been largely ignored by developers
 of smart contracts. This comes as a surprise as a salient
